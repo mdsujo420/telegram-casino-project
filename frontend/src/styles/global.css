@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto Mono', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #1F2937 0%, #111827 100%);
+  color: #FFFFFF;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* কাস্টম স্টাইল */
+.btn-primary {
+  @apply bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-semibold transition-all;
+}
+
+.btn-secondary {
+  @apply bg-gray-700 hover:bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold transition-all;
+}
+
+.card {
+  @apply bg-gray-800 rounded-lg p-6 border border-gray-700 shadow-lg;
+}
+
+.input-field {
+  @apply bg-gray-900 border border-gray-600 text-white px-4 py-2 rounded-lg w-full focus:outline-none focus:border-orange-500;
+}
+
+.badge {
+  @apply inline-block px-3 py-1 rounded-full text-sm font-semibold;
+}
+
+.badge-success {
+  @apply bg-green-900 text-green-200;
+}
+
+.badge-danger {
+  @apply bg-red-900 text-red-200;
+}
+
+.badge-warning {
+  @apply bg-yellow-900 text-yellow-200;
+}
+
+/* স্মুথ ট্রানজিশন */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
