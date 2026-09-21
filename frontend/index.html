@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telegram Casino - Master Platform</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { background-color: #0b0f19; color: #ffffff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    .neon-glow { box-shadow: 0 0 15px rgba(16, 185, 129, 0.4); }
+    .neon-border { border: 1px solid rgba(16, 185, 129, 0.5); }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+
+  <!-- Top Header / Wallet Bar -->
+  <header class="bg-slate-900/80 backdrop-blur-md sticky top-0 z-50 px-4 py-3 border-b border-slate-800 flex justify-between items-center">
+    <div class="flex items-center space-x-2">
+      <div class="bg-emerald-500 text-slate-950 font-bold p-2 rounded-xl text-lg"><i class="fa-solid fa-dice"></i></div>
+      <span class="font-extrabold text-xl tracking-wider text-emerald-400">CASINO<span class="text-white">PRO</span></span>
+    </div>
+    <div class="bg-slate-800 px-3 py-1.5 rounded-full neon-border flex items-center space-x-2">
+      <i class="fa-solid fa-wallet text-amber-400"></i>
+      <span id="wallet-balance" class="font-bold text-emerald-400">1,540.00 BDT</span>
+    </div>
+  </header>
+
+  <!-- Main Content Lobby -->
+  <main class="container mx-auto px-4 py-6 flex-grow">
+    
+    <!-- Banner Section -->
+    <div class="bg-gradient-to-r from-emerald-900 via-slate-900 to-purple-900 rounded-2xl p-6 mb-6 neon-border relative overflow-hidden">
+      <div class="relative z-10">
+        <h1 class="text-2xl font-bold mb-2 text-emerald-300">🔥 প্লে করুন এবং জিতুন!</h1>
+        <p class="text-slate-300 text-sm mb-4">৩০+ প্রিমিয়াম গেম নিয়ে তৈরি আমাদের ইনস্ট্যান্ট ক্যাশআউট প্ল্যাটফর্ম।</p>
+        <button class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-5 py-2.5 rounded-xl transition shadow-lg">ডিপোজিট করুন</button>
+      </div>
+    </div>
+
+    <!-- Games Grid Header -->
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-lg font-bold text-slate-200"><i class="fa-solid fa-fire text-amber-500 mr-2"></i>জনপ্রিয় গেমসমূহ</h2>
+      <span class="text-xs text-emerald-400 font-semibold cursor-hover">সবগুলো দেখুন (৩০+)</span>
+    </div>
+
+    <!-- Games Grid (30 Games Collection Preview) -->
+    <div class="grid grid-cols-3 gap-3">
+      
+      <!-- Game Card 1: Aviator -->
+      <div onclick="openGame('Aviator')" class="bg-slate-900 hover:bg-slate-800 p-3 rounded-xl border border-slate-800 text-center cursor-pointer transition transform hover:scale-105">
+        <div class="text-3xl mb-1">🚀</div>
+        <span class="text-xs font-bold text-slate-200">Aviator</span>
+      </div>
+
+      <!-- Game Card 2: Crash -->
+      <div onclick="openGame('Crash')" class="bg-slate-900 hover:bg-slate-800 p-3 rounded-xl border border-slate-800 text-center cursor-pointer transition transform hover:scale-105">
+        <div class="text-3xl mb-1">📈</div>
+        <span class="text-xs font-bold text-slate-200">Crash</span>
+      </div>
+
+      <!-- Game Card 3: Mines -->
+      <div onclick="openGame('Mines')" class="bg-slate-900 hover:bg-slate-800 p-3 rounded-xl border border-slate-800 text-center cursor-pointer transition transform hover:scale-105">
+        <div class="text-3xl mb-1">💣</div>
+        <span class="text-xs font-bold text-slate-200">Mines</span>
+      </div>
+
+      <!-- Game Card 4: Plinko -->
+      <div onclick="openGame('Plinko')" class="bg-slate-900 hover:bg-slate-800 p-3 rounded-xl border border-slate-800 text-center cursor-pointer transition transform hover:scale-105">
+        <div class="text-3xl mb-1">🎯</div>
+        <span class="text-xs font-bold text-slate-200">Plinko</span>
+      </div>
+
+      <!-- Game Card 5: Roulette -->
+      <div onclick="openGame('Roulette')" class="bg-slate-900 hover:bg-slate-800 p-3 rounded-xl border border-slate-800 text-center cursor-pointer transition transform hover:scale-105">
+        <div class="text-3xl mb-1">🎰</div>
+        <span class="text-xs font-bold text-slate-200">Roulette</span>
+      </div>
+
+      <!-- Game Card 6: Dice -->
+      <div onclick="openGame('Dice')" class="bg-slate-900 hover:bg-slate-800 p-3 rounded-xl border border-slate-800 text-center cursor-pointer transition transform hover:scale-105">
+        <div class="text-3xl mb-1">🎲</div>
+        <span class="text-xs font-bold text-slate-200">Dice</span>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Bottom Navigation Bar (For Mobile & Telegram Mini App Optimization) -->
+  <nav class="bg-slate-900 border-t border-slate-800 sticky bottom-0 z-50 flex justify-around py-3">
+    <button class="text-emerald-400 flex flex-col items-center text-xs">
+      <i class="fa-solid fa-house text-lg mb-1"></i>লবি
+    </button>
+    <button class="text-slate-400 hover:text-emerald-400 flex flex-col items-center text-xs">
+      <i class="fa-solid fa-gamepad text-lg mb-1"></i>গেমস
+    </button>
+    <button class="text-slate-400 hover:text-emerald-400 flex flex-col items-center text-xs">
+      <i class="fa-solid fa-wallet text-lg mb-1"></i>ওয়ালেট
+    </button>
+    <button class="text-slate-400 hover:text-emerald-400 flex flex-col items-center text-xs">
+      <i class="fa-solid fa-user text-lg mb-1"></i>প্রোফাইল
+    </button>
+  </nav>
+
+  <script>
+    function openGame(gameName) {
+      alert(gameName + ' গেম লোড হচ্ছে... ব্যাকএন্ড এপিআই কানেক্ট করা হবে।');
+    }
+  </script>
+</body>
+</html>
